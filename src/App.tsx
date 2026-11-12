@@ -1,5 +1,47 @@
 import Lamp from './Lamp'
 
-export default function App() {
-  return <main className="bg-[#131415]"><Lamp /></main>
+const sectionLayout =
+  'mx-auto grid max-w-[90rem] content-center gap-x-6 gap-y-5 px-5 md:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] md:items-center md:px-[4.44%]'
+const sectionLabel = 'text-xs uppercase tracking-widest text-[#e9aa62]'
+
+function App() {
+
+  return (
+    <main className="bg-[#131415] text-[#f1f0e9]">
+      <section className="mx-auto flex min-h-svh max-w-360 flex-col" aria-labelledby="hero-title">
+        <header className="mx-5 flex items-center justify-between gap-4 border-b border-[#343737] py-6 md:mx-[4.44%] md:py-9">
+          <p className="text-xl font-bold leading-none md:text-4xl">СДВИГ</p>
+          <p className="hidden text-xs uppercase text-[#989b98] md:block">Модульный свет / Объект 01</p>
+          <nav aria-label="Разделы страницы" className="flex flex-wrap justify-end gap-x-5 gap-y-2 text-xs md:gap-x-10 md:text-sm">
+            <a className="hover:text-[#e9aa62]" href="#hero-title">Конструкция</a>
+          </nav>
+        </header>
+        <div className={`${sectionLayout} w-full flex-1 py-7 md:grid-rows-[auto_auto]`}>
+          <div className="md:self-end">
+            <p className={sectionLabel}>01 / Объект</p>
+            <h1 id="hero-title" className="mt-4 text-[clamp(2.5rem,7.8vw,7rem)] font-medium leading-[1.03] tracking-[-0.055em] md:mt-12 xl:whitespace-nowrap">
+              Свет под<br />твоим углом
+            </h1>
+            <p className="mt-5 text-sm leading-snug text-[#989b98] md:mt-10 md:text-lg">
+              Модульная настольная лампа.<br />Ничего лишнего между тобой и светом.
+            </p>
+          </div>
+          <div className="min-w-0 md:col-start-2 md:row-start-1 md:row-span-2">
+            <Lamp />
+          </div>
+          <div className="md:col-start-1 md:row-start-2 md:self-start">
+            <a
+              href="#hero-title"
+              className="flex w-full max-w-[20rem] items-center justify-between gap-4 border-b border-[#777a74] pb-3 hover:border-[#e9aa62] md:mt-4"
+            >
+              Рассмотреть лампу <span className="text-2xl leading-none text-[#e9aa62]" aria-hidden="true">↘</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  )
 }
+
+export default App
