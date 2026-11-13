@@ -1,4 +1,5 @@
 import Lamp from './Lamp'
+import LampAssembly from './LampAssembly'
 
 const sectionLayout =
   'mx-auto grid max-w-[90rem] content-center gap-x-6 gap-y-5 px-5 md:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] md:items-center md:px-[4.44%]'
@@ -13,7 +14,7 @@ function App() {
           <p className="text-xl font-bold leading-none md:text-4xl">СДВИГ</p>
           <p className="hidden text-xs uppercase text-[#989b98] md:block">Модульный свет / Объект 01</p>
           <nav aria-label="Разделы страницы" className="flex flex-wrap justify-end gap-x-5 gap-y-2 text-xs md:gap-x-10 md:text-sm">
-            <a className="hover:text-[#e9aa62]" href="#hero-title">Конструкция</a>
+            <a className="hover:text-[#e9aa62]" href="#construction">Конструкция</a>
           </nav>
         </header>
         <div className={`${sectionLayout} w-full flex-1 py-7 md:grid-rows-[auto_auto]`}>
@@ -31,7 +32,7 @@ function App() {
           </div>
           <div className="md:col-start-1 md:row-start-2 md:self-start">
             <a
-              href="#hero-title"
+              href="#construction"
               className="flex w-full max-w-[20rem] items-center justify-between gap-4 border-b border-[#777a74] pb-3 hover:border-[#e9aa62] md:mt-4"
             >
               Рассмотреть лампу <span className="text-2xl leading-none text-[#e9aa62]" aria-hidden="true">↘</span>
@@ -40,6 +41,7 @@ function App() {
         </div>
       </section>
 
+      <LampAssembly />
     </main>
   )
 }
