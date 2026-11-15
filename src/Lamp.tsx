@@ -3,6 +3,10 @@ import aluminum from './assets/lamp/aluminum.png'
 import shadow from './assets/lamp/shadow.svg'
 import glow from './assets/lamp/glow.svg'
 import diffuser from './assets/lamp/diffuser.svg'
+import neutralGlow from './assets/lamp/neutral-glow.svg'
+import neutralDiffuser from './assets/lamp/neutral-diffuser.svg'
+import eveningGlow from './assets/lamp/evening-glow.svg'
+import eveningDiffuser from './assets/lamp/evening-diffuser.svg'
 import { parts } from './lampParts'
 
 // In the lit Figma frame, the hinge sits in front of the diffuser.
@@ -10,6 +14,8 @@ const litParts = [parts[0], parts[1], parts[3], parts[2]]
 
 const lightAssets = {
   demo: { glow, diffuser },
+  neutral: { glow: neutralGlow, diffuser: neutralDiffuser },
+  evening: { glow: eveningGlow, diffuser: eveningDiffuser },
 }
 
 type LampProps = {
@@ -21,7 +27,7 @@ type LampProps = {
 export default function Lamp({ exploded = false, lit, lighting = 'demo' }: LampProps) {
   const maskPrefix = useId()
   const orderedParts = lit === undefined ? parts : litParts
-  const onDesk = false
+  const onDesk = lighting !== 'demo'
   const layers = lightAssets[lighting]
   const lightClass = `motion-safe:transition-opacity motion-safe:duration-500 ${lit ? 'opacity-100' : 'opacity-0'}`
 
