@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import Lamp from './Lamp'
 import LampAssembly from './LampAssembly'
+import LampScenarios from './LampScenarios'
 
 const sectionLayout =
   'mx-auto grid max-w-[90rem] content-center gap-x-6 gap-y-5 px-5 md:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] md:items-center md:px-[4.44%]'
@@ -18,6 +19,7 @@ function App() {
           <nav aria-label="Разделы страницы" className="flex flex-wrap justify-end gap-x-5 gap-y-2 text-xs md:gap-x-10 md:text-sm">
             <a className="hover:text-[#e9aa62]" href="#construction">Конструкция</a>
             <a className="hover:text-[#e9aa62]" href="#light">Свет</a>
+            <a className="hover:text-[#e9aa62]" href="#scenarios">Сценарии</a>
           </nav>
         </header>
         <div className={`${sectionLayout} w-full flex-1 py-7 md:grid-rows-[auto_auto]`}>
@@ -75,6 +77,8 @@ function App() {
           <Lamp lit={lit} />
         </div>
       </section>
+
+      <LampScenarios />
     </main>
   )
 }
