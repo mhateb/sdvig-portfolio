@@ -25,7 +25,7 @@ export default function LampScenarios() {
           Один объект. Два настроения.
         </h2>
         <p className="mt-4 text-sm text-[#989b98] md:text-lg">От первой идеи — до последней страницы.</p>
-        <div className="mt-8 grid gap-x-4 gap-y-10 md:mt-11">
+        <div className="mt-8 grid gap-x-4 gap-y-10 md:mt-11 md:grid-cols-2">
           {scenarios.map(({ title, light, description, lighting }) => (
             <article key={lighting} className="grid gap-y-4 md:gap-y-5">
               <div className="md:order-2">
