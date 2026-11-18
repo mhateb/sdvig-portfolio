@@ -1,3 +1,4 @@
+import { useRef } from 'react'
 import desk from './assets/lamp/desk.jpg'
 import Lamp from './Lamp'
 
@@ -17,6 +18,8 @@ const scenarios = [
 ] as const
 
 export default function LampScenarios() {
+  const launchDialog = useRef<HTMLDialogElement>(null)
+
   return (
     <div className="mx-auto max-w-[90rem] px-5 md:px-[4.44%]">
       <section id="scenarios" aria-labelledby="scenarios-title" className="border-t border-[#343737] py-12 md:py-20">
@@ -50,6 +53,38 @@ export default function LampScenarios() {
             </article>
           ))}
         </div>
+      </section>
+
+      <section aria-labelledby="launch-title" className="grid gap-7 border-y border-[#343737] py-12 md:grid-cols-[minmax(0,2fr)_minmax(0,1fr)] md:items-center md:py-16">
+        <h2 id="launch-title" className="text-[clamp(2rem,4.5vw,4rem)] font-medium leading-[1.06] tracking-[-0.045em]">
+          Скоро станет<br />частью твоего стола.
+        </h2>
+        <div>
+          <button
+            type="button"
+            onClick={() => launchDialog.current?.showModal()}
+            className="inline-flex min-h-[3.75rem] w-full cursor-pointer items-center justify-between gap-5 bg-[#e9aa62] px-5 py-3 font-medium text-[#131415] hover:bg-[#f2bd7e] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#e9aa62] md:w-auto md:px-7"
+          >
+            Узнать о старте продаж <span aria-hidden="true">↗</span>
+          </button>
+          <p className="mt-3 text-xs text-[#989b98]">Демонстрация концепта</p>
+        </div>
+        <dialog
+          ref={launchDialog}
+          aria-labelledby="launch-dialog-title"
+          aria-describedby="launch-dialog-description"
+          className="m-auto w-[min(27rem,calc(100%-2.5rem))] border border-[#777a74] bg-[#131415] p-6 text-[#f1f0e9] backdrop:bg-black/75"
+        >
+          <h2 id="launch-dialog-title" className="text-2xl font-medium">Старт продаж</h2>
+          <p id="launch-dialog-description" className="mt-3 text-sm leading-relaxed text-[#b0aaa0]">
+            «СДВИГ» — концепт для портфолио. Дата запуска продаж пока не объявлена.
+          </p>
+          <form method="dialog">
+            <button className="mt-5 min-h-11 cursor-pointer border border-[#777a74] px-5 hover:border-[#e9aa62] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#e9aa62]">
+              Закрыть
+            </button>
+          </form>
+        </dialog>
       </section>
 
     </div>
