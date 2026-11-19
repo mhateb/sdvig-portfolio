@@ -87,6 +87,11 @@ export default function LampScenarios() {
         </dialog>
       </section>
 
+      <footer className="flex flex-wrap items-center justify-between gap-4 py-6 md:py-8">
+        <p className="text-xl font-bold md:text-2xl">СДВИГ</p>
+        <p className="hidden text-xs text-[#989b98] md:block">Свет, который меняет привычное.</p>
+        <p className="text-xs uppercase tracking-widest text-[#989b98]">Концепт / 2026</p>
+      </footer>
     </div>
   )
 }
