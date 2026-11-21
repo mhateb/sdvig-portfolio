@@ -11,7 +11,7 @@
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind-4-06b6d4?logo=tailwindcss&logoColor=white)
 ![GSAP](https://img.shields.io/badge/GSAP-ScrollTrigger-88ce02?logo=greensock&logoColor=white)
 
-[Макет в Figma](https://www.figma.com/design/WVmaDV1zAR1h16OpUqaP4I/Untitled?node-id=6-5) · [Локальный запуск](#локальный-запуск) · [Как устроена анимация](#как-устроена-анимация) · [Структура](#структура-проекта)
+[Открыть сайт](https://mhateb.github.io/sdvig-portfolio/) · [Макет в Figma](https://www.figma.com/design/WVmaDV1zAR1h16OpUqaP4I/Untitled?node-id=6-5) · [Локальный запуск](#локальный-запуск) · [Как устроена анимация](#как-устроена-анимация) · [Структура](#структура-проекта)
 
 </div>
 

@@ -4,5 +4,7 @@ import { defineConfig } from 'vite'
 
 // https://vite.dev/config/
 export default defineConfig({
+  // Относительные пути, чтобы сайт работал по адресу вида /sdvig-portfolio/ на GitHub Pages
+  base: './',
   plugins: [react(), tailwindcss()],
 })
