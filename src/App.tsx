@@ -4,7 +4,7 @@ import LampAssembly from './LampAssembly'
 import LampScenarios from './LampScenarios'
 
 const sectionLayout =
-  'mx-auto grid max-w-[90rem] content-center gap-x-6 gap-y-5 px-5 md:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] md:items-center md:px-[4.44%]'
+  'mx-auto grid max-w-360 content-center gap-x-6 gap-y-5 px-5 md:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] md:items-center md:px-[4.44%]'
 const sectionLabel = 'text-xs uppercase tracking-widest text-[#e9aa62]'
 
 function App() {
@@ -51,7 +51,7 @@ function App() {
       <section id="light" aria-labelledby="light-title" className={`${sectionLayout} min-h-svh py-7`}>
         <div>
           <p className={sectionLabel}>03 / Прикосновение</p>
-          <h2 id="light-title" className="mt-4 text-[clamp(2rem,6vw,5.5rem)] font-medium leading-[1.06] tracking-[-0.05em] md:mt-12 xl:whitespace-nowrap">
+          <h2 id="light-title" className="mt-4 text-[clamp(2rem,6vw,5.5rem)] font-medium leading-[1.06] tracking-tighter md:mt-12 xl:whitespace-nowrap">
             Одно касание.<br />Другой настрой.
           </h2>
           <p className="mt-5 text-sm leading-snug text-[#b0aaa0] md:mt-10 md:text-lg">
@@ -67,8 +67,8 @@ function App() {
               checked={lit}
               onChange={(event) => setLit(event.target.checked)}
             />
-            <span className="relative h-[34px] w-[68px] rounded-full bg-[#545653] peer-checked:bg-[#e9aa62] peer-focus-visible:outline-2 peer-focus-visible:outline-offset-4 peer-focus-visible:outline-[#e9aa62]">
-              <span className={`absolute top-[5px] left-[5px] size-6 rounded-full bg-[#131415] motion-safe:transition-transform ${lit ? 'translate-x-[34px]' : ''}`} />
+            <span className="relative h-8.5 w-17 rounded-full bg-[#545653] peer-checked:bg-[#e9aa62] peer-focus-visible:outline-2 peer-focus-visible:outline-offset-4 peer-focus-visible:outline-[#e9aa62]">
+              <span className={`absolute top-[5px] left-[5px] size-6 rounded-full bg-[#131415] motion-safe:transition-transform ${lit ? 'translate-x-8.5' : ''}`} />
             </span>
             <span aria-hidden="true" className={lit ? 'text-[#e9aa62]' : 'text-[#989b98]'}>Вкл</span>
           </label>

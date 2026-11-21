@@ -42,10 +42,10 @@ export default function LampAssembly() {
   return (
     <section id="construction" ref={section} aria-labelledby="assembly-title">
       <div ref={scene}>
-        <div className="mx-auto grid min-h-svh max-w-[90rem] content-center gap-x-6 gap-y-4 px-5 py-5 md:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] md:items-center md:px-[4.44%]">
+        <div className="mx-auto grid min-h-svh max-w-360 content-center gap-x-6 gap-y-4 px-5 py-5 md:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] md:items-center md:px-[4.44%]">
           <div>
             <p className="mb-3 text-xs uppercase tracking-widest text-[#e9aa62]">02 / Конструкция</p>
-            <h2 id="assembly-title" className="text-[clamp(2rem,6vw,5.375rem)] font-medium leading-[1.08] tracking-[-0.05em]">
+            <h2 id="assembly-title" className="text-[clamp(2rem,6vw,5.375rem)] font-medium leading-[1.08] tracking-tighter">
               Всё сложное<br />уже убрали.
             </h2>
             <p className="mt-4 text-sm leading-snug text-[#989b98] md:text-lg">
