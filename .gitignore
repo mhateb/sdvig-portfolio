@@ -16,6 +16,9 @@ dist-ssr
 .vscode/*
 !.vscode/extensions.json
 .idea
+
+# Tooling
+.playwright-mcp
 .DS_Store
 *.suo
 *.ntvs*

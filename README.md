@@ -1,10 +1,21 @@
+<div align="center">
+
 # СДВИГ
 
 **Свет под твоим углом.** Интерактивный промосайт модульной настольной лампы по макету Figma.
 
-Прокрути страницу, чтобы увидеть лампу в разнесённом виде и собрать её обратно. Затем включи свет и посмотри, как один предмет меняет настроение рабочего стола.
+[![CI](https://github.com/mhateb/sdvig-portfolio/actions/workflows/ci.yml/badge.svg)](https://github.com/mhateb/sdvig-portfolio/actions/workflows/ci.yml)
+![React](https://img.shields.io/badge/React-19-149eca?logo=react&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-7-3178c6?logo=typescript&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-8-646cff?logo=vite&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind-4-06b6d4?logo=tailwindcss&logoColor=white)
+![GSAP](https://img.shields.io/badge/GSAP-ScrollTrigger-88ce02?logo=greensock&logoColor=white)
 
-[Макет в Figma](https://www.figma.com/design/WVmaDV1zAR1h16OpUqaP4I/Untitled?node-id=6-5) · [Локальный запуск](#локальный-запуск) · [Как устроена анимация](#как-устроена-анимация)
+[Макет в Figma](https://www.figma.com/design/WVmaDV1zAR1h16OpUqaP4I/Untitled?node-id=6-5) · [Локальный запуск](#локальный-запуск) · [Как устроена анимация](#как-устроена-анимация) · [Структура](#структура-проекта)
+
+</div>
+
+Прокрути страницу, чтобы увидеть лампу в разнесённом виде и собрать её обратно. Затем включи свет и посмотри, как один предмет меняет настроение рабочего стола.
 
 ![Два сценария освещения на сайте СДВИГ. Слева нейтральный свет для работы, справа тёплый свет для вечера.](docs/sdvig-preview.jpg)
 
@@ -25,6 +36,19 @@
 **Из скролла в движение.** ScrollTrigger закрепляет сцену на участке длиной 1,6 высоты окна. `scrub: true` напрямую связывает положение деталей с прокруткой, поэтому при остановке они замирают, а при движении вверх проходят тот же путь в обратном порядке. Первые 28% участка занимают разборка и вывод деталей в разнесённое положение. После паузы они начинают сходиться. Например, плафон возвращается из смещения (+65, −80) в (0, 0) на участке с 64% до 94%. [Шкала GSAP](src/LampAssembly.tsx)
 
 **Включение света.** Состояние переключателя хранится в React. CSS меняет прозрачность ореола и светящегося рассеивателя за 500 мс. При включённом уменьшении движения конструкция показывается статично, а свет меняется сразу. [Переключатель](src/App.tsx)
+
+## Структура проекта
+
+```text
+src/
+├── App.tsx             страница: первый экран, переключатель света
+├── Lamp.tsx            SVG-лампа из масок Figma, с включённым и выключенным светом
+├── LampAssembly.tsx    сборка лампы на скролле (GSAP ScrollTrigger)
+├── LampScenarios.tsx   сцены «Работать» и «Замедлиться»
+├── lampParts.ts        геометрия деталей в системе координат 736 × 920
+└── assets/lamp/        SVG-детали, текстура алюминия, фон стола
+docs/                   превью для README
+```
 
 ## Локальный запуск
 
