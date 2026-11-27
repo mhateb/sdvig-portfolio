@@ -24,7 +24,7 @@ export default function LampScenarios() {
     <div className="mx-auto max-w-360 px-5 md:px-[4.44%]">
       <section id="scenarios" aria-labelledby="scenarios-title" className="border-t border-[#343737] py-12 md:py-20">
         <p className="text-xs uppercase tracking-widest text-[#e9aa62]">04 / Твой ритм</p>
-        <h2 id="scenarios-title" className="mt-5 text-[clamp(2rem,5vw,4.5rem)] font-medium leading-[1.06] tracking-tighter md:mt-9">
+        <h2 id="scenarios-title" className="mt-5 text-[clamp(2rem,5vw,4.5rem)] font-medium leading-[1.06] tracking-tight md:mt-9">
           Один объект. Два настроения.
         </h2>
         <p className="mt-4 text-sm text-[#989b98] md:text-lg">От первой идеи — до последней страницы.</p>
